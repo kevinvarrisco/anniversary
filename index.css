@@ -23,7 +23,7 @@ body{
 .hero-image-1{
     width: 100%;
     height: 100%;
-    background-image: url("photo1.jpg");
+    background-image: url("photo1.JPG");
     background-size: cover;
     background-position: center;
     transition: 3s;
@@ -32,7 +32,7 @@ body{
 .hero-image-2{
     width: 100%;
     height: 100%;
-    background-image: url("photo2.jpg");
+    background-image: url("photo2.JPG");
     background-size: cover;
     background-position: center;
     transition: 3s;
@@ -41,7 +41,7 @@ body{
 .hero-image-3{
     width: 100%;
     height: 100%;
-    background-image: url("photo3.jpg");
+    background-image: url("photo3.JPG");
     background-size: cover;
     background-position: center;
     transition: 3s;
@@ -50,7 +50,7 @@ body{
 .hero-image-4{
     width: 100%;
     height: 100%;
-    background-image: url("photo4.jpg");
+    background-image: url("photo4.JPG");
     background-size: cover;
     background-position: center;
     transition: 3s;
