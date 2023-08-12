@@ -45,3 +45,14 @@ setInterval(function shift(){
         x = 1
     }    
 },10000)
+
+var textSample = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia repellat tempora earum. Molestiae quas nesciunt impedit cupiditate iste dolores facilis, nam, mollitia, quibusdam harum consectetur magnam et provident vitae."
+var textParagraph1 = document.getElementsByClassName("text-paragraph")[0]
+
+for (var i = 0; i < 4; i++){
+    function type(){
+        // textParagraph1.innerText = textParagraph1.innerText + textSample[i]
+        console.log(i)
+    }
+    myTimeout = setTimeout(type,1000)
+}
