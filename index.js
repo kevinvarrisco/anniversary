@@ -138,7 +138,7 @@ function surprise(){
 //     }
 // }
 
-function alert(){
+function cek(){
     alert("Tunggu lengkapnya besok ya bubub hihi")
 }
 
