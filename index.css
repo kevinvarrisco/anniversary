@@ -222,7 +222,7 @@ body{
     background-position: center;
     background-size: cover;
     opacity: 50%;
-    transform: translateY(150%);
+    transform: translateY(180%);
     transition: 500ms;
 }
 

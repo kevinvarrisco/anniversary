@@ -101,12 +101,12 @@ function klik(){
 
     types()
     
-    var audio = new Audio("Perfect Ed Sheraan.mp3")
+    var audio = new Audio("Perfect Ed Sheeran.mp3")
     audio.play()
 
     homeButton.onclick = false
 }
-homeButton.onclick = klik
+// homeButton.onclick = klik
 
 
 // Surprise Kado Bawah
@@ -128,14 +128,14 @@ function surprise(){
     setTimeout(surprise2,500)
 }
 
-var a = document.querySelectorAll(".home-page")[0].offsetHeight
-var b = document.querySelectorAll(".paragraph")[0].offsetHeight
-var c = document.querySelectorAll(".photo-album")[0].offsetHeight
-var giftScrollEffect = a + b + c - 100
-window.onscroll = function(){
-    if(window.scrollY > giftScrollEffect ){
-        gift.style.transform = "translateY(0%)"
-    }
-}
+// var a = document.querySelectorAll(".home-page")[0].offsetHeight
+// var b = document.querySelectorAll(".paragraph")[0].offsetHeight
+// var c = document.querySelectorAll(".photo-album")[0].offsetHeight
+// var giftScrollEffect = a + b + c - 100
+// window.onscroll = function(){
+//     if(window.scrollY > giftScrollEffect ){
+//         gift.style.transform = "translateY(0%)"
+//     }
+// }
 
 
