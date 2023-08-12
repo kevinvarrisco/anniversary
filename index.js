@@ -1,11 +1,8 @@
+// Buat 4 foto Home Page otomatis Carousel
 var hero1 = document.querySelectorAll(".hero-image-1")[0]
 var hero2 = document.querySelectorAll(".hero-image-2")[0]
 var hero3 = document.querySelectorAll(".hero-image-3")[0]
 var hero4 = document.querySelectorAll(".hero-image-4")[0]
-
-function klik(){
-    window.scrollBy(0, window.innerHeight)
-}
 
 var x = 0
 setInterval(function shift(){
@@ -46,13 +43,99 @@ setInterval(function shift(){
     }    
 },10000)
 
-var textSample = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia repellat tempora earum. Molestiae quas nesciunt impedit cupiditate iste dolores facilis, nam, mollitia, quibusdam harum consectetur magnam et provident vitae."
-var textParagraph1 = document.getElementsByClassName("text-paragraph")[0]
 
-for (var i = 0; i < 4; i++){
-    function type(){
-        // textParagraph1.innerText = textParagraph1.innerText + textSample[i]
-        console.log(i)
+
+// Buat typewritter otomatis
+var textSample1 = "Happy Anniversary Bubub! Terima kasih udah jadi pacar terbaik buat aku, yang mau nemenin aku kapan aja dan dimana aja. Makasi juga udah selalu setia dan sabar menghadapi aku. Aku minta maaf ya kalo selama ini bikin kamu kesel, bikin kamu ga nyaman, pokoknya semua kesalahan - kesalahanku sengaja maupun tidak sengaja. Aku janji akan selalu berusaha menjadi cowok yang lebih baik buat kamu setiap harinya, yang bisa bikin kamu selalu nyaman dan bahagia."
+var textSample2 = "Ngga terasa udah setahun kita balikan Bub. Udah setahun loh aku tembak kamu malem-malem di mobil di depan rumahmu. Aku seneng banget waktu itu Bub. Aku pulang ga berhenti mikirin kamu. Aku ngga nyangka akhirnya aku pacaran sama kamu lagi. Selama setahun ini banyak hal yang udah kita lewatin. Aku bersyukur banget punya pacar kayak kamu Bub. Selama setahun ini aku ga pernah yang namanya kesel sama kamu atau merasa punya pacar itu nyusahin. Hebat kamu Bub, aku kagum sama kesabaranmu Bub. Sekali lagi makasi buat semuanya Bub dan maaf kalo aku belum sempurna yaa."
+var textSample3 = "Selamat hari jadi hubungan kita sayang. Semoga cinta kita tetap awet selamanya. Aku selalu sayang kamu Bub. I Love You Bubub!"
+var titleSample = "Selamat Hari Jadian"
+
+var titleParagraph = document.getElementsByClassName("title-paragraph")[0]
+var textParagraph1 = document.getElementsByClassName("text-paragraph")[0]
+var textParagraph2 = document.getElementsByClassName("text-paragraph")[1]
+var textParagraph3 = document.getElementsByClassName("text-paragraph")[2]
+
+var i = 0
+var j = 0
+function types(){
+    if(i < titleSample.length && j == 0){
+        titleParagraph.textContent += titleSample[i]
+        i++
+        setTimeout(types,100) 
+    } else if(i == titleSample.length && j == 0){
+        i = 0
+        j++
+        setTimeout(types,100)
     }
-    myTimeout = setTimeout(type,1000)
+    if(i < textSample1.length && j == 1){
+        textParagraph1.textContent += textSample1[i]
+        i++
+        setTimeout(types,100)
+    } else if(i == textSample1.length && j == 1){
+        i = 0
+        j++
+        setTimeout(types,100)
+    } else if(i < textSample2.length && j == 2){
+        textParagraph2.textContent += textSample2[i]
+        i++
+        setTimeout(types,100)
+    } else if(i == textSample2.length && j == 2){
+        i = 0
+        j++
+        setTimeout(types,100)
+    } else if(i < textSample3.length && j == 3){
+        textParagraph3.textContent += textSample3[i]
+        i++
+        setTimeout(types,100)
+    }
 }
+
+
+// Tombol See More
+var homeButton = document.querySelectorAll(".home-button")[0]
+function klik(){
+    document.body.style.overflow = "visible"
+
+    window.scrollBy(0, window.innerHeight-window.scrollY)
+
+    types()
+    
+    var audio = new Audio("Perfect Ed Sheraan.mp3")
+    audio.play()
+
+    homeButton.onclick = false
+}
+homeButton.onclick = klik
+
+
+// Surprise Kado Bawah
+var giftPage = document.querySelectorAll(".gift-page")[0]
+var gift = document.querySelectorAll(".gift")[0]
+function surprise(){
+    gift.style.opacity = "100%"
+    gift.style.width = "180px"
+    gift.style.height = "180px"
+
+    function surprise2(){
+        var giftTextHeader = document.createElement("h2")
+        giftTextHeader.innerText = "SURPRISE!"
+        giftPage.appendChild(giftTextHeader)
+        var giftText = document.createElement("h3")
+        giftText.innerText = "DI BAWAH KURSI !!!"
+        giftPage.appendChild(giftText)
+    }
+    setTimeout(surprise2,500)
+}
+
+var a = document.querySelectorAll(".home-page")[0].offsetHeight
+var b = document.querySelectorAll(".paragraph")[0].offsetHeight
+var c = document.querySelectorAll(".photo-album")[0].offsetHeight
+var giftScrollEffect = a + b + c - 100
+window.onscroll = function(){
+    if(window.scrollY > giftScrollEffect ){
+        gift.style.transform = "translateY(0%)"
+    }
+}
+
+
