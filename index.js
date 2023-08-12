@@ -138,4 +138,7 @@ function surprise(){
 //     }
 // }
 
+function alert(){
+    alert("Tunggu lengkapnya besok ya bubub hihi")
+}
 
