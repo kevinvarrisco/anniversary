@@ -1,244 +1,71 @@
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-}
-
-.home-page{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.hero-image-wrap{
-    width: 400%;
-    height: 100%;
-    display: flex;
-}
-
-.hero-image-1{
-    width: 100%;
-    height: 100%;
-    background-image: url("photo1.JPG");
-    background-size: cover;
-    background-position: center;
-    transition: 3s;
-}
-
-.hero-image-2{
-    width: 100%;
-    height: 100%;
-    background-image: url("photo2.JPG");
-    background-size: cover;
-    background-position: center;
-    transition: 3s;
-}
-
-.hero-image-3{
-    width: 100%;
-    height: 100%;
-    background-image: url("photo3.JPG");
-    background-size: cover;
-    background-position: center;
-    transition: 3s;
-}
-
-.hero-image-4{
-    width: 100%;
-    height: 100%;
-    background-image: url("photo4.JPG");
-    background-size: cover;
-    background-position: center;
-    transition: 3s;
-}
-
-.overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    opacity: 20%;
-    top: 0;
-}
-
-.header{
-    width: 300px;
-    position: absolute;
-    left: 50%;
-    top: 60px;
-    transform: translate(-50%,0);
-    font-size: 70px;
-    font-family: "Cookie";
-    text-align: center;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 15px rgba(79, 7, 7, 0.7);
-    letter-spacing: 1px;
-}
-
-.home-button{
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    left: 50%;
-    bottom: 60px;
-    transform: translate(-50%,0);
-    border-radius: 5px;
-    border: 2px solid white;
-    color: white;
-    font-family: "Edu SA Beginner";
-    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #d455dd;
 }
 
-
-
-.paragraph{
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgb(79, 7, 7);
-    padding: 20px 30px;
-    box-sizing: border-box;
-}
-
-.title-paragraph{
-    font-family: "Edu SA Beginner";
-    font-size: 32px;
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
-}
-
-.text-paragraph{
-    color: white;
-    font-family: "Montserrat";
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 15px;
-    text-align: justify;
-    line-height: 30px;
-}
-
-
-
-.photo-album{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(255, 242, 242);
-}
-
-.photo-album-title{
-    position: absolute;
-    font-size: 32px;
-    font-family: "Edu SA Beginner";
-    font-weight: bold;
-    margin-left: 30px;
-    line-height: 80px;
-    color: rgb(79, 7, 7);
-    letter-spacing: 1px;
-}
-
-.box-container{
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    padding: 80px 30px 30px 30px;
-    gap: 10px;
-    box-sizing: border-box;
-}
-
-.box:nth-of-type(1){
-    background-image: url("photo-box-1.jpeg");
-    background-position: top;
-    background-size: cover;
-    grid-column: 1 / span 2;
-    grid-row: 1;
-}
-
-.box:nth-of-type(2){
-    background-image: url("photo-box-2.jpeg");
-    background-position: center;
-    background-size: cover;
-    grid-column: 1;
-    grid-row: 2 / span 2;
-}
-
-.box:nth-of-type(3){
-    background-image: url("photo-box-3.jpeg");
-    background-position: center;
-    background-size: cover;
-    grid-column: 2;
-    grid-row: 2;
-}
-.box:nth-of-type(4){
-    background-image: url("photo-box-4.jpeg");
-    background-position: center;
-    background-size: cover;
-    grid-column: 1;
-    grid-row: 4;    
-}
-.box:nth-of-type(5){
-    background-image: url("photo-box-5.jpeg");
-    background-position: center;
-    background-size: cover;
-    grid-column: 2;
-    grid-row: 3 / span 2;  
-}
-.box:nth-of-type(6){
-    background-image: url("photo-box-6.jpeg");
-    background-position: top;
-    background-size: cover;
-    grid-column: 1 / span 2;
-    grid-row: 5;
-}
-
-
-.gift-page{
-    width: 100%;
+.container{
+    width: 70%;
     height: 350px;
-    background-color: rgb(79, 7, 7);
+}
+
+h1{
+    text-align: center;
+    font-size: 28px;
+    font-family: "Poppins";
+    color: #fddeff;
+}
+
+.edit{
+    font-size: 18px;
+    font-family: "Poppins";
+    color: #ffffff;
+}
+
+#username{
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0 10px 0;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#password{
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0 10px 0;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-}
-
-.gift{
-    width: 150px;
-    height: 150px;
-    background-image: url("kado.png");
-    background-position: center;
-    background-size: cover;
-    opacity: 50%;
-    transform: translateY(180%);
-    transition: 500ms;
-}
-
-.gift-page h2{
-    position: absolute;
-    margin-top: -220px;
-    color: rgb(225, 180, 180);
-    font-family: "Montserrat";
-    transition: 500ms;
-    font-size: 32px;
-}
-
-.gift-page h3{
-    position: absolute;
-    margin-bottom: -220px;
-    color: rgb(225, 180, 180);
-    font-family: "Montserrat";
-    transition: 500ms;
+    background-color: #59005f;
+    font-family: "Poppins";
+    font-weight: bold;
+    margin-top: 30px;
+    color: #fddeff;
 }
